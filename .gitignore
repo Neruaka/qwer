@@ -1,0 +1,50 @@
+# ──────────────────────────────────────────────────────────────
+# exercice-livraisons (Spark + Jupyter + Mongo)
+# versionné : docker-compose.yml, docker/, conf/, notebooks/, README.md
+# ──────────────────────────────────────────────────────────────
+
+# notebook perso : ne part pas sur github
+notebooks/exe.ipynb
+
+# archives de départ (redondantes avec les dossiers décompressés, 52 Mo + 2 Go)
+*.rar
+*.zip
+*.7z
+
+# jeux de données (375 Mo + 2,2 Go) : on garde juste le dossier data/, à remplir depuis Commandes.rar
+data/*
+!data/.gitkeep
+pageviews/
+
+# sorties générées par les notebooks (Parquet) : on garde juste le dossier
+resultats/*
+!resultats/.gitkeep
+
+# event logs du Spark history server : on garde juste le dossier
+events/*
+!events/.gitkeep
+
+# jupyter
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# spark en local (si tu lances pyspark hors docker)
+spark-warehouse/
+metastore_db/
+derby.log
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# secrets éventuels
+.env
+
+# os / ide
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
